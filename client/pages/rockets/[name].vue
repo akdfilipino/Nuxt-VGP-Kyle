@@ -20,9 +20,9 @@
 				<tr v-for="r in getRockets" :key="r.name">
 					<td v-if="r.name === name">{{ r.name }}</td>
 					<td v-if="r.name === name">{{ convertToDate(r.first_flight, "", [""]) }}</td>
-					<td v-if="r.name === name">{{ r.height.meters }}</td>
-					<td v-if="r.name === name">{{ r.diameter.meters }}</td>
-					<td v-if="r.name === name">{{ r.mass.kg }}</td>
+					<td v-if="r.name === name">{{ r.height.meters }} meters</td>
+					<td v-if="r.name === name">{{ r.diameter.meters }} meters</td>
+					<td v-if="r.name === name">{{ r.mass.kg }} kg</td>
 					<td v-if="r.name === name">{{ r.stages }}</td>
 				</tr>
 			</tbody>
