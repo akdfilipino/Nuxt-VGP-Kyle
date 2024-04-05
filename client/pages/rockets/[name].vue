@@ -1,6 +1,7 @@
 <template>
-    <h1>THIS IS DETAILS OF {{ name }}</h1>
+    
     <v-container>
+		<h1>This is the details of {{ name }}</h1>
         <v-table 	theme="dark"
 					density="comfortable"
 					height="980px"
@@ -17,12 +18,12 @@
 			</thead>
 			<tbody>
 				<tr v-for="r in getRockets" :key="r.name">
-					<td>{{ r.name }}</td>
-					<td>{{ convertToDate(r.first_flight, "", [""]) }}</td>
-					<td>{{ r.height.meters }}</td>
-					<td>{{ r.diameter.meters }}</td>
-					<td>{{ r.mass.kg }}</td>
-					<td>{{ r.stages }}</td>
+					<td v-if="r.name === name">{{ r.name }}</td>
+					<td v-if="r.name === name">{{ convertToDate(r.first_flight, "", [""]) }}</td>
+					<td v-if="r.name === name">{{ r.height.meters }}</td>
+					<td v-if="r.name === name">{{ r.diameter.meters }}</td>
+					<td v-if="r.name === name">{{ r.mass.kg }}</td>
+					<td v-if="r.name === name">{{ r.stages }}</td>
 				</tr>
 			</tbody>
 		</v-table>

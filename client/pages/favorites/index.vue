@@ -2,9 +2,10 @@
     <v-container>
         <v-btn @click.native="(e:any) => { storeFavorite.clearFaves()}">CLEAR</v-btn>
         <h1>Favorite Rockets</h1>
+        <v-spacer></v-spacer>
         <div>
             <div v-for="fave in storeFavorite.favArray">
-                <strong>{{ fave }}</strong>
+                <h2>{{ fave }}</h2>
             </div>
         </div>
     </v-container>

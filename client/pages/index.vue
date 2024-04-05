@@ -56,6 +56,8 @@ const { sortString, sort} = useSort();
 const { convertToDate } = useConvertToDate();
 const storeFavorite  = useFavorite();
 
+
+
 const GET_LAUNCHES = gql`
 	query Query($find: LaunchFind, $sort: String, $limit: Int) {
 		launches(find: $find, sort: $sort, limit: $limit) {
@@ -92,7 +94,7 @@ const { data: launchData } = await useAsyncQuery<{
 	}[]
 }>(GET_LAUNCHES)
 
-const launches = launchData.value.launches;
+const launches = launchData.value!.launches;
 const launchesToShow = ref(launches)
 
 const getLaunches = computed(() => {
